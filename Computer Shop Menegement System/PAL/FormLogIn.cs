@@ -24,7 +24,7 @@ namespace Computer_Shop_Menegement_System.PAL
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

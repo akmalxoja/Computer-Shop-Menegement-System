@@ -34,13 +34,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.closewindow = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -94,6 +94,31 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Password:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label4.Location = new System.Drawing.Point(240, 407);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Forget Password";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(139, 443);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(299, 56);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Log In";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -131,6 +156,7 @@
             // 
             // closewindow
             // 
+            this.closewindow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closewindow.Image = global::Computer_Shop_Menegement_System.Properties.Resources.close;
             this.closewindow.Location = new System.Drawing.Point(519, 12);
             this.closewindow.Name = "closewindow";
@@ -138,7 +164,6 @@
             this.closewindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closewindow.TabIndex = 2;
             this.closewindow.TabStop = false;
-            this.closewindow.UseWaitCursor = true;
             this.closewindow.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
@@ -150,31 +175,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.label4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label4.Location = new System.Drawing.Point(240, 407);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Forget Password";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(139, 443);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(299, 56);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormLogIn
             // 
