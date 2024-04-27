@@ -44,10 +44,33 @@ namespace Computer_Shop_Menegement_System.PAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            this.Hide();
-            form2.ShowDialog();
-            this.Close();
+
+            string l = textBox1.Text;
+            string p  = textBox2.Text;
+
+            UserLogin userLogin = new UserLogin(l,p);
+
+            if (UserLogin.isLogin) {
+            
+            
+                MainForm form2 = new MainForm();
+                Main1 main1 = new Main1();
+               
+                this.Hide();
+                form2.ShowDialog();
+                main1.ShowDialog();
+                
+            
+            }
+
+            else
+            {
+                MessageBox.Show("Login yoki parol xato");
+                textBox1.Text = "";
+                textBox2.Text = "";
+
+            }
+
 
         }
     }

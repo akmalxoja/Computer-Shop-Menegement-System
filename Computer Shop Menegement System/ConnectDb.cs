@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,16 +12,16 @@ namespace Computer_Shop_Menegement_System
     
     internal class ConnectDb
     {
-        protected SqlConnection conn;
-        protected SqlCommand cmd;
-        protected SqlDataReader reader;
+        protected NpgsqlConnection conn;
+        protected NpgsqlCommand cmd;
+        protected NpgsqlDataReader reader;
         protected string sqlText;
 
         public ConnectDb()
         {
 
-            string connectionstring = "Host=localhost;Username=postgres;Password=root;Database=CMSdb";
-            this.conn = new SqlConnection(connectionstring);
+            string connectionstring = "Server=localhost;Port=5432;Database=CMSdb;User Id=postgres;Password=root";
+            conn = new NpgsqlConnection(connectionstring);
             this.conn.Open();
         }
 

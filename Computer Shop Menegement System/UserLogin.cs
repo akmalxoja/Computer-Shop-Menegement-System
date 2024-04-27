@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,27 +13,26 @@ namespace Computer_Shop_Menegement_System
     {
         public static string Username = String.Empty;
         public static string Password = String.Empty;
-        public static string userPhoto = String.Empty;
         public static bool isLogin = false;
         public UserLogin(string userN, string userP)
         {
-            //Konstruktrga username va password keladi.
-            userN.Trim(); // boshi va oxiridagi probellarni olib tashlash
+            
+            userN.Trim(); 
             userP.Trim();
 
-            if (!isLogin) // Agar user login bo'lmagan bo'lsa.
+            if (!isLogin) 
             {
                 sqlText = "SELECT * FROM users WHERE user_name='" + userN + "' AND user_password='" + userP + "'";
                 try
                 {
-                    cmd = new SqlCommand(sqlText, conn);
+                    cmd = new NpgsqlCommand(sqlText, conn);
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
                         Username = userN;
                         Password = userP;
                         isLogin = true;
-                        userPhoto = reader.GetString(5);
+                    
                     }
                 }
                 catch (Exception ex)

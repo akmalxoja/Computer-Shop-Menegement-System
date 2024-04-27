@@ -36,15 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.closewindow = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.closewindow = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.closewindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closewindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +81,7 @@
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBox2.Location = new System.Drawing.Point(138, 359);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(261, 27);
             this.textBox2.TabIndex = 7;
             // 
@@ -119,6 +120,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // closewindow
+            // 
+            this.closewindow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closewindow.Image = global::Computer_Shop_Menegement_System.Properties.Resources.remove;
+            this.closewindow.Location = new System.Drawing.Point(519, 12);
+            this.closewindow.Name = "closewindow";
+            this.closewindow.Size = new System.Drawing.Size(35, 35);
+            this.closewindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closewindow.TabIndex = 2;
+            this.closewindow.TabStop = false;
+            this.closewindow.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -154,18 +167,6 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // closewindow
-            // 
-            this.closewindow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closewindow.Image = global::Computer_Shop_Menegement_System.Properties.Resources.close;
-            this.closewindow.Location = new System.Drawing.Point(519, 12);
-            this.closewindow.Name = "closewindow";
-            this.closewindow.Size = new System.Drawing.Size(35, 35);
-            this.closewindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closewindow.TabIndex = 2;
-            this.closewindow.TabStop = false;
-            this.closewindow.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Computer_Shop_Menegement_System.Properties.Resources.comp;
@@ -182,6 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(567, 560);
+            this.Controls.Add(this.closewindow);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -190,19 +192,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.closewindow);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogIn";
             this.Text = "Computer Shop | LogIn";
             this.Load += new System.EventHandler(this.FormLogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.closewindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closewindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
