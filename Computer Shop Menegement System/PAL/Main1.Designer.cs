@@ -41,7 +41,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 25;
+            this.timer1.Interval = 45;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
@@ -87,7 +87,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label3.Location = new System.Drawing.Point(298, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(386, 81);
+            this.label3.Size = new System.Drawing.Size(407, 81);
             this.label3.TabIndex = 6;
             this.label3.Text = "Computer Shop";
             // 

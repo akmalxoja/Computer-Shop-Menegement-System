@@ -1,4 +1,4 @@
-﻿using System.Data.SqlClient;
+﻿/*using System.Data.SqlClient;
 
 namespace Computer_Shop_Menegement_System
 {
@@ -13,4 +13,4 @@ namespace Computer_Shop_Menegement_System
             this.conn = conn;
         }
     }
-}
+}*/
