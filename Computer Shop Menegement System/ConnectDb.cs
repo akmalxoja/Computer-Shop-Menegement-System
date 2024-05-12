@@ -15,6 +15,7 @@ namespace Computer_Shop_Menegement_System
         protected NpgsqlConnection conn;
         protected NpgsqlCommand cmd;
         protected NpgsqlDataReader reader;
+        protected NpgsqlDataAdapter adapter;
         protected string sqlText;
 
         public ConnectDb()

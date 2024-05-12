@@ -53,12 +53,11 @@ namespace Computer_Shop_Menegement_System.PAL
             if (UserLogin.isLogin) {
             
             
-                MainForm form2 = new MainForm();
-                Main1 main1 = new Main1();
+               AdminForm adminForm = new AdminForm();   
+              
                
                 this.Hide();
-                form2.ShowDialog();
-                main1.ShowDialog();
+                adminForm.ShowDialog();
                 
             
             }
@@ -71,6 +70,11 @@ namespace Computer_Shop_Menegement_System.PAL
 
             }
 
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

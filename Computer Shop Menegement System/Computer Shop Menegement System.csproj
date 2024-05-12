@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDb.cs" />
-    <Compile Include="NpgSqlCommand.cs" />
+    <Compile Include="ControlUsers.cs" />
     <Compile Include="PAL\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
