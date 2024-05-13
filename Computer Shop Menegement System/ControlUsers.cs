@@ -60,7 +60,7 @@ namespace Computer_Shop_Menegement_System
             int e = 0;
             // update uchun sql kod.
             // bu metodga id ham keladi,
-            sqlText = "UPDATE users SET user_name='" + user.user_name + "', email='" + user.email + "', user_passwoed='" + user.user_password + "'  WHERE id=" + user.id + "";
+            sqlText = "UPDATE users SET user_name='" + user.user_name + "', email='" + user.email + "', user_password='" + user.user_password + "'  WHERE id=" + user.id + "";
             try
             {
                 cmd = new NpgsqlCommand(sqlText, conn);
@@ -116,6 +116,10 @@ namespace Computer_Shop_Menegement_System
         public string email;
         public string user_password;
 
+        public User()
+        {
+        }
+
         public User(string user_name, string email, string user_password)
         {
            
@@ -123,6 +127,16 @@ namespace Computer_Shop_Menegement_System
             this.email = email;
             this.user_password = user_password;
 
+
+        }
+
+        public User(string user_name, string email, string user_password, int id)
+        {
+
+            this.user_name = user_name;
+            this.email = email;
+            this.user_password = user_password;
+            this.id = id;
 
         }
     }

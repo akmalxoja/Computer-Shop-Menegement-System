@@ -152,7 +152,13 @@ namespace Computer_Shop_Menegement_System.PAL
             string email = textBox2.Text.Trim();
             string password = textBox3.Text.Trim();
 
-            User user = new User(userName, email, password);
+            User user = new User();
+
+            user.user_name = userName;
+            user.email = email;
+            user.user_password = password;
+         
+
             
 
 

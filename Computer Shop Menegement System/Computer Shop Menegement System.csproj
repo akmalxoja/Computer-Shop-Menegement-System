@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDb.cs" />
+    <Compile Include="ControlGpu.cs" />
     <Compile Include="ControlUsers.cs" />
     <Compile Include="PAL\AdminForm.cs">
       <SubType>Form</SubType>
@@ -165,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="computer.ico" />
+    <None Include="Resources\pen_8706223.png" />
+    <None Include="Resources\pen %281%29.png" />
+    <None Include="Resources\pen1.png" />
+    <None Include="Resources\pen.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\group1.png" />

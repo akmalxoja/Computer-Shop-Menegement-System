@@ -224,7 +224,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(454, 200);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(79, 22);
+            this.textBox4.Size = new System.Drawing.Size(48, 22);
             this.textBox4.TabIndex = 21;
             // 
             // ResetBtn
