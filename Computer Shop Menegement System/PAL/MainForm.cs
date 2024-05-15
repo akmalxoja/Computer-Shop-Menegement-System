@@ -35,6 +35,7 @@ namespace Computer_Shop_Menegement_System.PAL
             }*/
 
         }
+       
 
 
         public void clearBoxs()
@@ -49,6 +50,7 @@ namespace Computer_Shop_Menegement_System.PAL
             oldPhotoName = "";
             oldPhotoPath = "";
             pictureBox7.Image = null;
+            uploadDataToGridView();
           
 
         }
@@ -133,7 +135,12 @@ namespace Computer_Shop_Menegement_System.PAL
         {
             {
                 string name = textBox2.Text.Trim();
-                int memory_size = int.Parse( textBox3.Text.Trim());
+                int memory_size = 0;
+                if(textBox3.Text != "")
+                {
+                memory_size = int.Parse( textBox3.Text.Trim());
+
+                }
                 string manufacturer = textBox4.Text.Trim();
                 double price = double.Parse(textBox5.Text.Trim());
                 int year_released = int.Parse(textBox6.Text.Trim());  
@@ -252,6 +259,76 @@ namespace Computer_Shop_Menegement_System.PAL
 
             
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //delete
+            //dataGridView'da tanlangan elementni o'chiradi
+            if (textBox1.Text != "")
+            {
+                int id = int.Parse(textBox1.Text);
+                //rasmni o'chirish uchun
+                string rasm = pictureBox7.Tag.ToString();
+                DialogResult dr = MessageBox.Show("Element o'chirilsinmi?", "O'chirish", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    ControlGpu controlgpu = new ControlGpu();
+                    if (controlgpu.deleteData(id))
+                    {
+                        MessageBox.Show("Element o'chirildi.");
+                        try
+                        {
+                            if (File.Exists(@"..\..\Resources\users\" + rasm))
+                            {
+                                File.Delete(@"..\..\Resources\users\" + rasm);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                        clearBoxs();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Element o'chirildi.");
+                    }
+                }
+            }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+           label15.Text = DateTime.Now.ToString("dd-MM-yyyy");   
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string keyText = textBox7.Text.Trim();
+            //keyText = keyText.ToLower();
+
+            if (keyText != "")
+            {
+                ControlGpu controlGpu = new ControlGpu();
+                dataGridView1.DataSource = controlGpu.searchData(keyText);
+             
+            }
+            else
+            {
+                MessageBox.Show("Qidiruv maydoni bo'sh bo'lmasligi kerak.");
+            }
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

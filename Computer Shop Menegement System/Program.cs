@@ -17,7 +17,7 @@ namespace Computer_Shop_Menegement_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main1());
+            Application.Run(new FormCpu());
         }
     }
 }

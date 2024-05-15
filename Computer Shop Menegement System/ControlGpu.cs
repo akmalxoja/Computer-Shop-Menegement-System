@@ -80,6 +80,50 @@ namespace Computer_Shop_Menegement_System
             }
         }
 
+        public bool deleteData(int id)
+        {
+            int e = 0;
+            // delete uchun sql kod
+            // bu metodga id ham keladi,
+            sqlText = "DELETE from gpu WHERE gpu_id=" + id;
+            try
+            {
+                cmd = new NpgsqlCommand(sqlText, conn);
+                e = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            if (e == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public DataTable searchData(string keyText)
+        {   
+            
+            
+            DataTable dt = new DataTable();
+            sqlText = "SELECT * from gpu where gpu_name LIKE '%" +  keyText + "%';";
+            try
+            {
+                adapter = new NpgsqlDataAdapter(sqlText, conn);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return dt;
+        }
+
 
     }
 

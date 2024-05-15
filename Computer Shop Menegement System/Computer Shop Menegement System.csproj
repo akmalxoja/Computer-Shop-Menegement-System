@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDb.cs" />
+    <Compile Include="ControlCpu.cs" />
     <Compile Include="ControlGpu.cs" />
     <Compile Include="ControlUsers.cs" />
     <Compile Include="PAL\AdminForm.cs">
@@ -106,6 +107,18 @@
     </Compile>
     <Compile Include="PAL\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FormCpu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FormCpu.Designer.cs">
+      <DependentUpon>FormCpu.cs</DependentUpon>
     </Compile>
     <Compile Include="PAL\Main1.cs">
       <SubType>Form</SubType>
@@ -130,6 +143,12 @@
     <Compile Include="UserLogin.cs" />
     <EmbeddedResource Include="PAL\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FormCpu.resx">
+      <DependentUpon>FormCpu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PAL\Main1.resx">
       <DependentUpon>Main1.cs</DependentUpon>
@@ -166,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="computer.ico" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\pen %281%291.png" />
+    <None Include="Resources\delete.png" />
     <None Include="Resources\pen_8706223.png" />
     <None Include="Resources\pen %281%29.png" />
     <None Include="Resources\pen1.png" />
